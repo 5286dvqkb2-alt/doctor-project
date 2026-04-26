@@ -15,6 +15,10 @@ class DoctorsPage {
         await this.addDoctor.open();
         await this.newDoctor.waitForOpened();
     }
+
+    doctorByName(name) {
+        return $(`//*[contains(text(), "${name}")]`);
+    }
 }
 
 module.exports = new DoctorsPage();

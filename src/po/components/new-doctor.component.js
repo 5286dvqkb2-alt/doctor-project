@@ -39,6 +39,10 @@ class NewDoctorComponent {
         return this.rootEl.$("#DutyTiming");
     }
 
+    get saveButton() {
+        return this.rootEl.$('button.e-primary');
+    }
+
     async waitForOpened() {
         await this.rootEl.waitForDisplayed();
     }

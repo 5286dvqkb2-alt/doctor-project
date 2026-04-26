@@ -41,5 +41,9 @@ describe("Appointment Planner", () => {
 
         await doctorsPage.newDoctor.selectDutyTiming("10:00 AM - 07:00 PM");
         await expect(await doctorsPage.newDoctor.dropdownText(doctorsPage.newDoctor.dutyTimingDropdown)).toBe("10:00 AM - 07:00 PM");
+        await doctorsPage.newDoctor.saveButton.click();
+
+        await expect(doctorsPage.newDoctor.rootEl).not.toBeDisplayed();
+        await expect(doctorsPage.doctorByName("Dr. John Doe")).toBeDisplayed();
     });
 });
