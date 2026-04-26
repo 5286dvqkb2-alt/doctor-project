@@ -1,4 +1,4 @@
-const addNewPatient = require("../components/add-new-patient.component");
+const addNewPatient = require("../components/patients/add-new-patient.component");
 
 class PatientsPage {
     constructor() {

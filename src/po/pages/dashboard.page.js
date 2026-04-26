@@ -1,4 +1,4 @@
-const sideMenu = require("../components/sidemenu.component");
+const sideMenu = require("../components/common/sidemenu.component");
 
 class DashboardPage {
     constructor() {
