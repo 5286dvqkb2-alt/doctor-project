@@ -1,10 +1,12 @@
-const addDoctor = require("../components/add-doctor.component");
 const newDoctor = require("../components/new-doctor.component");
 
 class DoctorsPage {
     constructor() {
-        this.addDoctor = addDoctor;
         this.newDoctor = newDoctor;
+    }
+
+    get addDoctorButton() {
+        return $(".specialization-types button.e-control");
     }
 
     async open() {
@@ -12,7 +14,7 @@ class DoctorsPage {
     }
 
     async openAddDoctorDialog() {
-        await this.addDoctor.open();
+        await this.addDoctorButton.click();
         await this.newDoctor.waitForOpened();
     }
 

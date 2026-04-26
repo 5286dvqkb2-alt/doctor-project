@@ -6,11 +6,17 @@ class SideMenu {
     itemByName(name) {
         const selectors = {
             dashboard: '[routerlink="/dashboard"]',
-            schedule: '[routerlink="/calendar"]',
-            doctors: '[routerlink="/doctors"]'
+            doctors: '[routerlink="/doctors"]',
+            patients: '[routerlink="/patients"]'
         };
 
-        return this.rootEl.$(selectors[name.toLowerCase()]);
+        const selector = selectors[name.toLowerCase()];
+
+        if (!selector) {
+            throw new Error(`Side menu item "${name}" is not supported`);
+        }
+
+        return this.rootEl.$(selector);
     }
 
     async openItem(name) {

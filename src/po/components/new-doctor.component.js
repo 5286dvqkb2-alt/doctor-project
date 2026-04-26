@@ -23,7 +23,7 @@ class NewDoctorComponent {
         return this.rootEl.$("#Specialization");
     }
 
-    get EducationInput() {
+    get educationInput() {
         return this.rootEl.$('[name="Education"]');
     }
 
@@ -31,7 +31,7 @@ class NewDoctorComponent {
         return this.rootEl.$("#Experience");
     }
 
-    get DesignationInput() {
+    get designationInput() {
         return this.rootEl.$('[name="Designation"]');
     }
 
@@ -58,8 +58,8 @@ class NewDoctorComponent {
         await this.nameInput.setValue(name);
         await this.mobileInput.setValue(mobile);
         await this.emailInput.setValue(email);
-        await this.EducationInput.setValue(education);
-        await this.DesignationInput.setValue(designation);
+        await this.educationInput.setValue(education);
+        await this.designationInput.setValue(designation);
     }
 
     genderRadio(gender) {
